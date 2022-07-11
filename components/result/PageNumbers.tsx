@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const PageNumbers = ({
   postsPerPage,
@@ -12,6 +12,7 @@ const PageNumbers = ({
     pageNumbers.push(i);
   }
 
+  // eslint-disable-next-line consistent-return
   const getPaginationGroup = () => {
     // const start = Math.floor((currentPage - 1) / 4) * 4;
     // return new Array(4).fill().map((_, i) => start + i + 1);
@@ -47,7 +48,10 @@ const PageNumbers = ({
     // return new Array(4).fill().map((_, i) => start + i + 1);
     // return [1,2,3]
     if (currentPage < 4) {
-      return new Array(paginatorSize).fill().map((_, i) => 1 + i).slice(0, pageNumbers.length);
+      return new Array(paginatorSize)
+        .fill()
+        .map((_, i) => 1 + i)
+        .slice(0, pageNumbers.length);
     }
 
     if (currentPage >= 4) {

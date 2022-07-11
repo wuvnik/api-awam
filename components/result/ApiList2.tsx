@@ -358,7 +358,7 @@ const ApiList2: FC<UserItemProps> = ({ data, query, setQuery }) => {
     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
 
   const newData = search(fetchedData);
-  console.log('FF', newData);
+  // console.log('FF', newData);
 
   const renderApiFeature = (feature: string) => {
     switch (feature) {
