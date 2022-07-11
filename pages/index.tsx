@@ -1,3 +1,4 @@
+import { Search } from '@mui/icons-material';
 import type { NextPage } from 'next';
 // import Head from 'next/head';
 // import Image from 'next/image';
@@ -17,18 +18,23 @@ const Home: NextPage = () => {
 
   const handleSubmit = () => {
     router.push({
-      pathname: '/institutions',
+      pathname: '/list',
       query: { keyword: searchTerm },
     });
   };
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-primary/400">
       {/* <LogoSecondary width={281} height={138} /> */}
+      <div className="flex text-5xl md:text-8xl borderrounded-2xlz italic cursor-default">
+        <div className="font-thin bg-blacktext-white bordershadow">API</div>
+        {/* <div className="font-extralight">API-</div> */}
+        <div className="font-bold bg-whitetext-black opacity-70">AWAM</div>
+      </div>
       <div className="md:w-[762px] pt-8 flex items-center border-b border-primary/900 ">
         <input
           type="text"
           className="appearance-none focus:ring-0 focus:outline-none bg-transparent w-full h-14 placeholder-neutral/400"
-          placeholder="Search by researcher name, papers, university, or keyword"
+          placeholder="Search for public API"
           onChange={handleInputChange}
           onKeyDown={(e) => {
             if (e.key === 'Enter') {
@@ -37,7 +43,9 @@ const Home: NextPage = () => {
           }}
         />
         <button type="submit" className="cursor-pointer" onClick={handleSubmit}>
-          {/* <SearchIcon /> */}Search
+          {/* <SearchIcon /> */}
+          <Search />
+          {/* Search */}
         </button>
       </div>
     </div>
