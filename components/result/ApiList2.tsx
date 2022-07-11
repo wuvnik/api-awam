@@ -201,7 +201,8 @@ function EnhancedTableHead(props: EnhancedTableProps) {
 interface EnhancedTableToolbarProps {
   numSelected: number;
   // setQuery: React.SetStateAction<string>;
-  setQuery: React.ChangeEventHandler<HTMLInputElement>;
+  // setQuery: React.ChangeEventHandler<HTMLInputElement>;
+  setQuery: any;
 }
 
 const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
@@ -271,7 +272,8 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
 interface UserItemProps {
   data: IEntry[];
   query: string;
-  setQuery: React.ChangeEventHandler<HTMLInputElement>;
+  // setQuery: React.ChangeEventHandler<HTMLInputElement>;
+  setQuery: any;
 }
 
 const ApiList2: FC<UserItemProps> = ({ data, query, setQuery }) => {
