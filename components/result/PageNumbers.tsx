@@ -46,24 +46,24 @@ const PageNumbers = ({
     // return Arr.filter((i) => i > 0);
     // const start = Math.floor((c - 1) / 4) * 4;
     // return new Array(4).fill().map((_, i) => start + i + 1);
-    // return [1,2,3]
-    if (currentPage < 4) {
-      return new Array(paginatorSize)
-        .fill()
-        .map((_, i) => 1 + i)
-        .slice(0, pageNumbers.length);
-    }
+    return [1, 2, 3];
+    // if (currentPage < 4) {
+    //   return new Array(paginatorSize)
+    //     .fill()
+    //     .map((_, i) => 1 + i)
+    //     .slice(0, pageNumbers.length);
+    // }
 
-    if (currentPage >= 4) {
-      if (currentPage >= pageNumbers.length - 2) {
-        const lastP = pageNumbers.length - 5;
-        return new Array(paginatorSize).fill().map((_, i) => lastP + i + 1);
-      }
-      return new Array(paginatorSize)
-        .fill()
-        .map((_, i) => validPageStart + i + 0);
-      //   .filter((i) => i > 0);
-    }
+    // if (currentPage >= 4) {
+    //   if (currentPage >= pageNumbers.length - 2) {
+    //     const lastP = pageNumbers.length - 5;
+    //     return new Array(paginatorSize).fill().map((_, i) => lastP + i + 1);
+    //   }
+    //   return new Array(paginatorSize)
+    //     .fill()
+    //     .map((_, i) => validPageStart + i + 0);
+    //   //   .filter((i) => i > 0);
+    // }
 
     // if (currentPage > (pageNumbers.length - 3 )) {
     // // if (currentPage === 7) {
