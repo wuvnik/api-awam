@@ -414,6 +414,7 @@ const ApiList2: FC<UserItemProps> = ({ data, query, setQuery }) => {
     // }
     // return feature;
   };
+  // if(!data) return
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -485,13 +486,18 @@ const ApiList2: FC<UserItemProps> = ({ data, query, setQuery }) => {
                         {/* {row.API}
                         {row.Description} */}
                         <div>{row.API}</div>
-                        <p className="text-tiny text-neutral/400zz text-gray-400">
+                        <p className="text-tiny text-neutral/400zz text-gray-400z text-[#a0a0a6]">
                           {row.Description}
                         </p>
                       </TableCell>
                       <TableCell align="left">{row.Category}</TableCell>
                       <TableCell align="left">
-                        <a href={row.Link} target="_blank" rel="noreferrer">
+                        <a
+                          href={row.Link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-blue-500"
+                        >
                           {row.Link}
                         </a>
                         {/* {row.Link} */}
