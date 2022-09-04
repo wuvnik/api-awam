@@ -1,3 +1,4 @@
+// example response
 const listApi = {
   count: 1421,
   entries: [

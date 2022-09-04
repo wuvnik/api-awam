@@ -1,3 +1,4 @@
+// example
 // eslint-disable-next-line no-use-before-define
 import React, { FC } from 'react';
 
@@ -86,7 +87,6 @@ interface UserItemProps {
 }
 
 const ApiList: FC<UserItemProps> = ({ data }) => {
-  //   console.log(data);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -101,24 +101,6 @@ const ApiList: FC<UserItemProps> = ({ data }) => {
     setPage(0);
   };
   return (
-    // <div className="bg-red-900z flex p-5z h-1/2zz w-full h-[600px]z my-5">
-    //   <table className="w-full h-full m-5 ">
-    //     <tbody className="h-full p-5 divide-y border">
-    //       <tr>
-    //         <th>Name</th>
-    //         <th>Desc</th>
-    //         <th>Link</th>
-    //       </tr>
-    //       {data.map((item) => (
-    //         <tr key={item.Link}>
-    //           <td>{item.API}</td>
-    //           <td>{item.Description}</td>
-    //           <td>{item.Link}</td>
-    //         </tr>
-    //       ))}
-    //     </tbody>
-    //   </table>
-    // </div>
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">

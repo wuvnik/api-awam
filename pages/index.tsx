@@ -1,10 +1,7 @@
 import { Search } from '@mui/icons-material';
 import type { NextPage } from 'next';
-// import Head from 'next/head';
-// import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { SetStateAction, useState } from 'react';
-// import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,14 +20,12 @@ const Home: NextPage = () => {
     });
   };
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-primary/400zz bg-[#E0E1EB]">
-      {/* <LogoSecondary width={281} height={138} /> */}
-      <div className="flex text-5xl md:text-8xl borderrounded-2xlz italic cursor-default">
+    <div className="flex flex-col items-center justify-center h-screen bg-[#E0E1EB]">
+      <div className="flex text-5xl md:text-8xl select-none italic cursor-default">
         <div className="font-thin bg-blacktext-white bordershadow">API</div>
-        {/* <div className="font-extralight">API-</div> */}
-        <div className="font-bold bg-whitetext-black opacity-70">AWAM</div>
+        <div className="font-bold opacity-70">AWAM</div>
       </div>
-      <div className="md:w-[762px] pt-8 flex items-center border-b border-primary/900zz border-[#50537C] ">
+      <div className="md:w-[762px] pt-8 flex items-center border-b border-[#50537C] ">
         <input
           type="text"
           className="appearance-none focus:ring-0 focus:outline-none bg-transparent w-full h-14 placeholder-neutral/400"
@@ -43,9 +38,7 @@ const Home: NextPage = () => {
           }}
         />
         <button type="submit" className="cursor-pointer" onClick={handleSubmit}>
-          {/* <SearchIcon /> */}
           <Search />
-          {/* Search */}
         </button>
       </div>
     </div>
